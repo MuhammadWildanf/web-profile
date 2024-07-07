@@ -1,5 +1,36 @@
 import * as Icon from "react-feather";
-export const expertiseData = [
+
+interface Expertise {
+  title: string;
+  Icon: React.ComponentType;
+}
+
+interface Service {
+  title: string;
+  desc: string;
+  Icon: React.ComponentType;
+}
+
+interface Project {
+  image: string;
+  title: string;
+  subTitle: string;
+}
+
+interface Blog {
+  image: string;
+  title: string;
+  desc: string;
+}
+
+interface Review {
+  name: string;
+  designation: string;
+  image: string;
+  desc: string;
+}
+
+export const expertiseData: Expertise[] = [
   {
     title: "Developing",
     Icon: Icon.Monitor,
@@ -49,7 +80,8 @@ export const expertiseData = [
     Icon: Icon.Activity,
   },
 ];
-export const servicesData = [
+
+export const servicesData: Service[] = [
   {
     title: "UX / UI Design",
     desc: "The phrasal sequence of the is now so that many campaign and benefit",
@@ -81,7 +113,8 @@ export const servicesData = [
     Icon: Icon.Watch,
   },
 ];
-export const project = [
+
+export const project: Project[] = [
   {
     image: "/images/works/1.jpg",
     title: "Fronter Theme",
@@ -123,7 +156,8 @@ export const project = [
     subTitle: "UI / UX Design",
   },
 ];
-export const blogData = [
+
+export const blogData: Blog[] = [
   {
     image: "/images/blog/01_giglink.jpg",
     title: "Giglink: Tailwind CSS NFT Marketplace Template",
@@ -140,7 +174,8 @@ export const blogData = [
     desc: "The phrasal sequence of the is now so that many campaign and benefit",
   },
 ];
-export const review = [
+
+export const review: Review[] = [
   {
     name: "Thomas Israel",
     designation: "Manager",

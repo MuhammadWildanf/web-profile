@@ -1,6 +1,7 @@
-'use client'
-import React,{useEffect} from "react";
-import dynamic from 'next/dynamic'
+'use client';
+
+import React, { useEffect } from "react";
+import dynamic from 'next/dynamic';
 
 const Navbar = dynamic(() => import('./components/Navbar'));
 const HeroOne = dynamic(() => import('./components/HeroOne'));
@@ -15,27 +16,28 @@ const GetInTouch = dynamic(() => import('./components/GetInTouch'));
 const Footer = dynamic(() => import('./components/Footer'));
 const Switcher = dynamic(() => import('./components/Switcher'));
 
-export default function Index(){
+export default function Index() {
     useEffect(() => {
-        if (typeof window !== "undefined"){
+        if (typeof window !== "undefined") {
             document.documentElement.setAttribute("dir", "ltr");
             document.documentElement.classList.add('light');
         }
-      }, []);
-    return(
+    }, []);
+
+    return (
         <>
-            <Navbar/>
-            <HeroOne/>
-            <AboutUs/>
-            <Services/>
-            <CTABanner/>
-            <Experience/>
-            <Projects/>
-            <Clients/>
-            <Blogs/>
-            <GetInTouch/>
-            <Footer/>
-            <Switcher/>
+            <Navbar />
+            <HeroOne />
+            <AboutUs />
+            <Services />
+            <CTABanner />
+            <Experience />
+            <Projects />
+            <Clients />
+            <Blogs />
+            <GetInTouch />
+            <Footer />
+            <Switcher />
         </>
-    )
+    );
 }

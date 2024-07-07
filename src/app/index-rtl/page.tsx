@@ -1,9 +1,10 @@
-'use client'
-import React,{useEffect} from "react";
+'use client';
+
+import React, { useEffect } from "react";
 import dynamic from 'next/dynamic';
 
 const Navbar = dynamic(() => import('../components/Navbar'));
-const HeroTwo = dynamic(() => import('../components/HeroTwo'));
+const HeroOne = dynamic(() => import('../components/HeroOne'));
 const AboutUs = dynamic(() => import('../components/AboutUs'));
 const Services = dynamic(() => import('../components/Service'));
 const CTABanner = dynamic(() => import('../components/CTABanner'));
@@ -15,27 +16,28 @@ const GetInTouch = dynamic(() => import('../components/GetInTouch'));
 const Footer = dynamic(() => import('../components/Footer'));
 const Switcher = dynamic(() => import('../components/Switcher'));
 
-export default function Index(){
+export default function IndexRtl() {
     useEffect(() => {
-        if (typeof window !== "undefined"){
-            document.documentElement.setAttribute("dir", "ltr");
+        if (typeof window !== "undefined") {
+            document.documentElement.setAttribute("dir", "rtl");
             document.documentElement.classList.add('light');
         }
-      }, []);
-    return(
+    }, []);
+
+    return (
         <>
-            <Navbar/>
-            <HeroTwo/>
-            <AboutUs/>
-            <Services/>
-            <CTABanner/>
-            <Experience/>
-            <Projects/>
-            <Clients/>
-            <Blogs/>
-            <GetInTouch/>
-            <Footer/>
-            <Switcher/>
+            <Navbar />
+            <HeroOne />
+            <AboutUs />
+            <Services />
+            <CTABanner />
+            <Experience />
+            <Projects />
+            <Clients />
+            <Blogs />
+            <GetInTouch />
+            <Footer />
+            <Switcher />
         </>
-    )
+    );
 }
